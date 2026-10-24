@@ -121,7 +121,8 @@ button { font: inherit; }
 
 @media (max-width: 760px) {
   .section-wrap, .site-header { width: calc(100% - 40px); }
-  .site-header { height: 72px; }
+  .site-header { position: sticky; top: 0; z-index: 20; height: 72px; background: var(--paper); transition: transform 180ms ease; }
+  .site-header.is-hidden { transform: translateY(-100%); }
   .menu-toggle { z-index: 3; display: grid; gap: 5px; width: 42px; height: 42px; place-content: center; border: 1px solid var(--line); background: transparent; cursor: pointer; }
   .menu-toggle > span:not(.visually-hidden) { display: block; width: 17px; height: 1px; background: var(--ink); }
   .site-nav { position: absolute; z-index: 2; top: 71px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 18px; border-bottom: 1px solid var(--line); background: var(--paper); }
